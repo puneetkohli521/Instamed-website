@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instamed</title>
+
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="css/UsefulLinks.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var paramValue = getUrlParameter('param');
+        $('.nav-pills li').removeClass('active')
+         if(paramValue==1){
+          $('#tnc').click();
+         } 
+         else if(paramValue==2){
+          $('#policy').click();
+         } 
+         else if(paramValue==3){
+          $('#contact').click();
+         }
+         else
+          $('#Useful_links').click();
+      });
+
+  function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+    </script>
+  </head>
+  <body>
+    <div>
+      <!-- nav bar for main website // contents needs to be added-->
+      <nav class="custom-navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="home_logo" href="#">
+              <img alt="Brand" src="images/instamed/logo"> <!-- repace logo with company logo-->
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banar for displaying Links -->
+      <div id="banner">
+        <h1 class="heading">Usefull Links</h1>
+        <div class="page_links">
+          <ul class="nav nav-pills">
+            <li ><a id="Useful_links" data-toggle="pill" href="#faq">FAQ</a></li>
+            <li ><a id="tnc" data-toggle="pill" href="#terms_n_cond">Terms and Conditions</a></li>
+            <li ><a id="policy" data-toggle="pill" href="#privacy_policy">Privacy Policy</a></li>
+            <li ><a id="contact" data-toggle="pill" href="#contact_us">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section for adding content for the links selected-->
+      <section>
+        <div id="content" class="tab-content">
+          
+          <div id="faq" class="tab-pane fade in active">
+            <p>FAQ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          
+          <div id="terms_n_cond" class="tab-pane fade">
+            <p> TNC Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum./p>
+          </div>
+          
+          <div id="privacy_policy" class="tab-pane fade">
+            <p>PP Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          
+          <div id="contact_us" class="tab-pane fade">
+            <p>CU Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
